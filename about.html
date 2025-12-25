@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - CampusMart</title>
+    <meta name="description" content="Learn about CampusMart and our mission">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🎓</span>
+                CampusMart
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="marketplace.html" class="nav-link">Marketplace</a>
+                <a href="announcement.html" class="nav-link">Announcements</a>
+                <a href="about.html" class="nav-link active">About</a>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="marketplace.html" class="nav-link">Marketplace</a>
+            <a href="announcement.html" class="nav-link">Announcements</a>
+            <a href="about.html" class="nav-link active">About</a>
+        </div>
+    </nav>
+
+    <main class="about-page">
+        <div class="page-header">
+            <h1>About CampusMart</h1>
+            <p>Connecting students, one trade at a time</p>
+        </div>
+
+        <section class="about-hero">
+            <div class="about-content">
+                <h2>Our Story</h2>
+                <p>CampusMart was born from a simple observation: students have stuff they don't need, and other students need stuff they don't have. We created a platform to bridge that gap within the trusted community of a faculty.</p>
+                <p>No complicated sign-ups, no transaction fees, no middlemen. Just students helping students through the power of WhatsApp and campus connections.</p>
+            </div>
+            <div class="about-image">
+                <div class="about-graphic">
+                    <span>🎓</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="mission-section">
+            <h2>Our Mission</h2>
+            <div class="mission-cards">
+                <div class="mission-card">
+                    <div class="mission-icon">💰</div>
+                    <h3>Save Money</h3>
+                    <p>Help students save money by buying pre-owned items at great prices</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">♻️</div>
+                    <h3>Reduce Waste</h3>
+                    <p>Promote sustainability by giving items a second life</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">🤝</div>
+                    <h3>Build Community</h3>
+                    <p>Strengthen connections within the faculty community</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">⚡</div>
+                    <h3>Fast & Easy</h3>
+                    <p>Make buying and selling as simple as sending a message</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <h2>How We're Different</h2>
+            <div class="difference-grid">
+                <div class="difference-item">
+                    <div class="diff-icon">📍</div>
+                    <h3>Campus-Focused</h3>
+                    <p>We're not trying to be everything for everyone. We focus on one thing: making trading within your faculty easy and safe.</p>
+                </div>
+                <div class="difference-item">
+                    <div class="diff-icon">💬</div>
+                    <h3>WhatsApp Integration</h3>
+                    <p>One click connects you directly to the seller via WhatsApp. No in-app messaging, no delays, just real conversations.</p>
+                </div>
+                <div class="difference-item">
+                    <div class="diff-icon">🆓</div>
+                    <h3>Completely Free</h3>
+                    <p>No listing fees, no commission, no hidden charges. Your money stays with you.</p>
+                </div>
+                <div class="difference-item">
+                    <div class="diff-icon">🛡️</div>
+                    <h3>Trusted Community</h3>
+                    <p>Trade with people you might see in class tomorrow. The campus setting creates natural accountability.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <h2>Get In Touch</h2>
+            <p>Have questions, suggestions, or feedback? We'd love to hear from you!</p>
+            <div class="contact-methods">
+                <a href="mailto:campusmart@example.com" class="contact-card">
+                    <span class="contact-icon">✉️</span>
+                    <span>campusmart@example.com</span>
+                </a>
+                <a href="https://wa.me/2348000000000" target="_blank" class="contact-card">
+                    <span class="contact-icon">💬</span>
+                    <span>WhatsApp Support</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>Is CampusMart free to use?</summary>
+                    <p>Yes! CampusMart is completely free. There are no listing fees, no transaction fees, and no hidden charges.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>How do I contact a seller?</summary>
+                    <p>Simply click on any product card to be redirected to the seller's WhatsApp. From there, you can negotiate, ask questions, and arrange a meetup.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>How do I list a product?</summary>
+                    <p>Go to the Marketplace page and click "Add Your Product". Fill in the details including your WhatsApp number, and your listing will appear immediately.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Is it safe to meet strangers?</summary>
+                    <p>We recommend meeting in public places on campus during daylight hours. Bring a friend for larger transactions, and always let someone know where you're going.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I delete my listing?</summary>
+                    <p>Currently, listings are stored locally. Clear your browser data to remove them, or contact us for assistance.</p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo-icon">🎓</span>
+                <span>CampusMart</span>
+            </div>
+            <p>© 2025 CampusMart. Made for students, by students.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

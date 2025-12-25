@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements - CampusMart</title>
+    <meta name="description" content="Latest announcements and updates from CampusMart">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🎓</span>
+                CampusMart
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="marketplace.html" class="nav-link">Marketplace</a>
+                <a href="announcement.html" class="nav-link active">Announcements</a>
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="marketplace.html" class="nav-link">Marketplace</a>
+            <a href="announcement.html" class="nav-link active">Announcements</a>
+            <a href="about.html" class="nav-link">About</a>
+        </div>
+    </nav>
+
+    <main class="announcements-page">
+        <div class="page-header">
+            <h1>Announcements</h1>
+            <p>Stay updated with the latest news and updates</p>
+        </div>
+
+        <div class="announcements-container">
+            <article class="announcement-card featured">
+                <div class="announcement-badge">📌 Pinned</div>
+                <div class="announcement-date">December 20, 2025</div>
+                <h2>Welcome to CampusMart!</h2>
+                <p>We're thrilled to launch CampusMart, your one-stop marketplace for buying and selling within the faculty. Whether you're looking for textbooks, electronics, or just about anything else, you can find it here!</p>
+                <div class="announcement-tags">
+                    <span class="tag">Welcome</span>
+                    <span class="tag">Launch</span>
+                </div>
+            </article>
+
+            <article class="announcement-card">
+                <div class="announcement-date">December 18, 2025</div>
+                <h2>Safety Tips for Trading</h2>
+                <p>Your safety is our priority! Here are some tips for safe trading:</p>
+                <ul>
+                    <li>Always meet in public places on campus</li>
+                    <li>Bring a friend when meeting for large transactions</li>
+                    <li>Verify the product before paying</li>
+                    <li>Use WhatsApp to communicate and keep records</li>
+                </ul>
+                <div class="announcement-tags">
+                    <span class="tag">Safety</span>
+                    <span class="tag">Tips</span>
+                </div>
+            </article>
+
+            <article class="announcement-card">
+                <div class="announcement-date">December 15, 2025</div>
+                <h2>End of Semester Sale Event! 🎉</h2>
+                <p>As the semester comes to an end, now is the perfect time to sell items you no longer need and grab great deals from fellow students! List your products today and reach hundreds of buyers.</p>
+                <div class="announcement-tags">
+                    <span class="tag">Event</span>
+                    <span class="tag">Sale</span>
+                </div>
+            </article>
+
+            <article class="announcement-card">
+                <div class="announcement-date">December 10, 2025</div>
+                <h2>New Categories Added</h2>
+                <p>We've added new categories to help you find exactly what you're looking for:</p>
+                <ul>
+                    <li>📚 Books & Study Materials</li>
+                    <li>💻 Electronics & Gadgets</li>
+                    <li>🪑 Furniture & Decor</li>
+                    <li>👕 Clothing & Accessories</li>
+                    <li>📦 Miscellaneous Items</li>
+                </ul>
+                <div class="announcement-tags">
+                    <span class="tag">Update</span>
+                    <span class="tag">Features</span>
+                </div>
+            </article>
+
+            <article class="announcement-card">
+                <div class="announcement-date">December 5, 2025</div>
+                <h2>Community Guidelines</h2>
+                <p>To ensure a positive experience for everyone, please follow these guidelines:</p>
+                <ul>
+                    <li>Be honest about product conditions</li>
+                    <li>Respond to inquiries promptly</li>
+                    <li>Price items fairly</li>
+                    <li>Respect other users</li>
+                    <li>Report suspicious activity</li>
+                </ul>
+                <div class="announcement-tags">
+                    <span class="tag">Guidelines</span>
+                    <span class="tag">Community</span>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo-icon">🎓</span>
+                <span>CampusMart</span>
+            </div>
+            <p>© 2025 CampusMart. Made for students, by students.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
