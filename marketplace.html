@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace - SESETsquare</title>
+    <meta name="description" content="Browse and buy products from your FUTO SESET faculty community - textbooks, electronics, furniture and more">
+    <meta name="keywords" content="FUTO marketplace, SESET students, campus buy sell, textbooks, electronics, furniture, clothing, FUTO">
+    <meta name="author" content="SESETsquare">
+    <meta property="og:title" content="Marketplace - SESETsquare">
+    <meta property="og:description" content="Browse and buy products from your SESET faculty community">
+    <meta property="og:image" content="SQUARE.png">
+    <meta property="og:url" content="https://sesetsquare.com/marketplace">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://sesetsquare.com/marketplace">
+    <link rel="icon" href="SQUARE.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="SQUARE.png" alt="SESETsquare Logo" class="logo-icon">
+                SESETsquare
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="marketplace.html" class="nav-link active">Marketplace</a>
+                <a href="announcement.html" class="nav-link">Announcements</a>
+                <a href="about.html" class="nav-link">About</a>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="marketplace.html" class="nav-link active">Marketplace</a>
+            <a href="announcement.html" class="nav-link">Announcements</a>
+            <a href="about.html" class="nav-link">About</a>
+        </div>
+    </nav>
+
+    <main class="marketplace-page">
+        <div class="page-header">
+            <h1>Marketplace</h1>
+            <p>Find amazing deals from your campus community</p>
+        </div>
+
+        <div class="marketplace-controls">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search products..." onkeyup="filterProducts()">
+                <span class="search-icon">🔍</span>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterByCategory('all')">All</button>
+                <button class="filter-btn" onclick="filterByCategory('books')">📚 Books</button>
+                <button class="filter-btn" onclick="filterByCategory('electronics')">💻 Electronics</button>
+                <button class="filter-btn" onclick="filterByCategory('furniture')">🪑 Furniture</button>
+                <button class="filter-btn" onclick="filterByCategory('clothing')">👕 Clothing</button>
+                <button class="filter-btn" onclick="filterByCategory('other')">📦 Other</button>
+            </div>
+        </div>
+
+        <div class="products-grid" id="allProducts">
+            <!-- Products will be loaded by JS -->
+        </div>
+
+        <div class="add-product-section">
+            <h2>Want to Sell Something?</h2>
+            <p>Add your product to the marketplace and connect with buyers instantly!</p>
+            <button class="btn btn-primary" onclick="openAddProductModal()">+ Add Your Product</button>
+        </div>
+    </main>
+
+    <!-- Add Product Modal -->
+    <div class="modal" id="addProductModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeAddProductModal()">×</button>
+            <h2>Add New Product</h2>
+            <form id="addProductForm" onsubmit="addProduct(event)">
+                <div class="form-group">
+                    <label for="productName">Product Name</label>
+                    <input type="text" id="productName" required placeholder="e.g., Calculus Textbook">
+                </div>
+                <div class="form-group">
+                    <label for="productPrice">Price (₦)</label>
+                    <input type="number" id="productPrice" required placeholder="e.g., 5000">
+                </div>
+                <div class="form-group">
+                    <label for="productCategory">Category</label>
+                    <select id="productCategory" required>
+                        <option value="">Select category</option>
+                        <option value="books">📚 Books</option>
+                        <option value="electronics">💻 Electronics</option>
+                        <option value="furniture">🪑 Furniture</option>
+                        <option value="clothing">👕 Clothing</option>
+                        <option value="other">📦 Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="productDescription">Description</label>
+                    <textarea id="productDescription" required placeholder="Describe your product..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="sellerName">Your Name</label>
+                    <input type="text" id="sellerName" required placeholder="e.g., John Doe">
+                </div>
+                <div class="form-group">
+                    <label for="sellerWhatsapp">WhatsApp Number</label>
+                    <input type="tel" id="sellerWhatsapp" required placeholder="e.g., 2348012345678">
+                    <small>Include country code without + sign</small>
+                </div>
+                <div class="form-group">
+                    <label for="productImage">Product Image URL (optional)</label>
+                    <input type="url" id="productImage" placeholder="https://example.com/image.jpg">
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Add Product</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="SQUARE.png" alt="SESETsquare Logo" class="logo-icon">
+                <span>SESETsquare</span>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="marketplace.html">Marketplace</a>
+                <a href="announcement.html">Announcements</a>
+                <a href="about.html">About</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+            </div>
+            <p>© 2025 SESETsquare. <a href="https://darc.com.ng" target="_blank">Darc Design</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
